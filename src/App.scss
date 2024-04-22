@@ -5,6 +5,75 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  .App-container{
+    max-width: 1550px;
+    margin: 0 auto;
+    position: relative;
+    Button{
+      background: none;
+      border: 1px solid #000;
+      color: #000;
+      border-radius: 45px;
+      margin-left: 10px;
+    }
+    Button:hover{
+      background: #fff;
+      border: 1px solid #FFF;
+      color: red
+    }
+    #formSearch{
+      position: relative;
+      max-width: 200px;
+      #inputSearch{
+        width: 100%;
+        padding-left: 30px;
+        border-radius: 45px;
+        border: 1px solid #000;
+      }
+      #inputSearch:focus{
+        box-shadow: none;
+      }
+      Button{
+        position: absolute;
+        background: none;
+        border: none;
+        left: -5px;
+        margin: 0;
+      }
+    }
+    .nav-link {
+      color: #333;
+      font-weight: 600;
+      margin-left: 50px;
+      font-size: 20px;
+    }
+    .nav-link:hover{
+      color: red;
+    }
+    .template1{ 
+      position: absolute;
+      width: 1340px;
+      height: 1188px;
+      border-radius: 100%;
+      top: -394px;
+      left: 661px;
+      background: linear-gradient(#FCF2F2,#F4BCBC);
+    }
+    .template2{
+      width: 1040px;
+      height: 290px;
+      border-radius:100%;
+      border:rgb(255 224 224 / 53%) 0px inset;
+      position: absolute;
+      background-image: radial-gradient(ellipse, rgba(209,26,63,0.55) 0%,rgb(255, 215, 215) 100%);
+      box-shadow:rgb(253 207 207) 0px 0px 30px 30px ;
+      filter:blur(55px);
+      top:560px;
+      right: -170px;
+    }
+  }
+
 }
 
 code {
