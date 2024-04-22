@@ -3,15 +3,16 @@ import Container from 'react-bootstrap/Container';
 import Form from 'react-bootstrap/Form';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import iconCart from '../../assets/images/iconCart.svg'
-import iconUser from '../../assets/images/iconUser.svg'
-import LogoApp from '../../assets/images/logo.svg'
+import iconCart from '../../assets/images/svg/iconCart.svg'
+import iconUser from '../../assets/images/svg/iconUser.svg'
+import LogoApp from '../../assets/images/svg/logo.svg'
 import { CiSearch } from "react-icons/ci";
+import { Image } from 'react-bootstrap';
 const Header = (props)=>{
   return<>
     <Navbar expand="lg">
       <Container>
-        <Navbar.Brand href="#"><img src={LogoApp}></img></Navbar.Brand>
+        <Navbar.Brand href="#"><Image src={LogoApp}></Image></Navbar.Brand>
         <Navbar.Toggle aria-controls="navbarScroll" />
         <Navbar.Collapse id="navbarScroll">
           <Nav
@@ -34,8 +35,8 @@ const Header = (props)=>{
           </Form>
           <Button>Login</Button>
           <Button>Register</Button>
-          <a href=""><img src={iconCart} alt="Icon Cart" /></a>
-          <a href=""><img src={iconUser} alt="Icon User" /></a>
+          <a href="#action1"><Image src={iconCart} alt="Icon Cart" /></a>
+          <a href="#action1"><Image src={iconUser} alt="Icon User" /></a>
         </Navbar.Collapse>
       </Container>
     </Navbar>
