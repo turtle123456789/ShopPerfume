@@ -11,6 +11,22 @@ body {
     max-width: 1550px;
     margin: 0 auto;
     position: relative;
+    .swiper-button-next, .swiper-button-prev{
+      color: #000;
+      background: #a4a4a483;
+      border-radius: 100%;
+      padding: 30px;
+      opacity: 0.4;
+    }
+    .swiper-button-next::after, .swiper-button-prev::after{
+      font-size: 20px;
+    }
+    .swiper-button-next:hover, .swiper-button-pre:hover{
+      opacity: 1;
+      
+      border-radius: 100%;
+      background: #c4c4c4bb;
+    }
     #Header{
       height: 900px;
     }
@@ -59,7 +75,7 @@ body {
     .template1{ 
       position: absolute;
       width: 1340px;
-      height: 1188px;
+      aspect-ratio: 1340/1188;
       border-radius: 100%;
       top: -394px;
       left: 661px;

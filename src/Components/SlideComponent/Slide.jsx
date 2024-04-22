@@ -2,27 +2,41 @@
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import "swiper/css";
+import 'swiper/css/navigation';
 import { Image } from 'react-bootstrap';
-import { Autoplay} from 'swiper/modules';
-const Slide = ({arrSlide ,index})=>{
+import { Autoplay,Navigation} from 'swiper/modules';
+import CartBrand from '../CartBrandComponent/CartBrand';
+const Slide = ({datas ,index,typeSlide,bool})=>{
+
     return<>
     <Swiper className="mySwiper"
-    style={{maxWidth:"600px", maxHeight:"820px",position:"absolute", top:"0", right:"150px"}}
+    spaceBetween={(index-1)*10}
     slidesPerView={index}
-   
     loop={true}
+    navigation={true}
     autoplay={{
-      delay: 1000,
+      delay: 2000,
       disableOnInteraction: false,
     }}
-    modules={[Autoplay]}
+    modules={[Autoplay,Navigation]}
     >  
-      {arrSlide && arrSlide.length>0 && arrSlide.map((image,index)=>{
-      return(
-        <SwiperSlide key={`image-${index}`}> 
-          <Image src={image}></Image>
-        </SwiperSlide>
-      )
+    
+      {datas && datas.length>0 &&  datas.map((data,index)=>{
+        console.log('swiperLoaded', Swiper)
+        if (typeSlide === "slideBanner") {
+          return (
+            <SwiperSlide key={`data1-${index}`}> 
+              <Image src={data.image}></Image>
+            </SwiperSlide>
+          );
+        }else if(typeSlide === "slideBrand"){
+          return (
+            <SwiperSlide key={`data2-${index}`}> 
+              <CartBrand datas={data}/>
+            </SwiperSlide>
+          );
+      }
+      return null;
       })}
     </Swiper>
     </>
