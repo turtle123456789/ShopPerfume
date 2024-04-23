@@ -21,9 +21,8 @@ body {
     .swiper-button-next::after, .swiper-button-prev::after{
       font-size: 20px;
     }
-    .swiper-button-next:hover, .swiper-button-pre:hover{
+    .swiper-button-next:hover, .swiper-button-prev.App-container{
       opacity: 1;
-      
       border-radius: 100%;
       background: #c4c4c4bb;
     }
@@ -72,26 +71,51 @@ body {
     .nav-link:hover{
       color: red;
     }
-    .template1{ 
-      position: absolute;
-      width: 1340px;
-      aspect-ratio: 1340/1188;
-      border-radius: 100%;
-      top: -394px;
-      left: 661px;
-      background: linear-gradient(#FCF2F2,#F4BCBC);
-    }
-    .template2{
-      width: 1040px;
-      height: 290px;
-      border-radius:100%;
-      border:rgb(255 224 224 / 53%) 0px inset;
-      position: absolute;
-      background-image: radial-gradient(ellipse, rgba(209,26,63,0.55) 0%,rgb(255, 215, 215) 100%);
-      box-shadow:rgb(253 207 207) 0px 0px 30px 30px ;
-      filter:blur(55px);
-      top:560px;
-      right: -170px;
+    .templateBackground{
+      position: relative;
+      display: flex;
+      justify-content: center;
+      .template1{ 
+        position: absolute;
+        width: 1340px;
+        aspect-ratio: 1340/1188;
+        border-radius: 100%;
+        top: -394px;
+        left: 661px;
+        background: linear-gradient(#FCF2F2,#F4BCBC);
+      }
+      .template2{
+        width: 1040px;
+        height: 290px;
+        border-radius:100%;
+        border:rgb(255 224 224 / 53%) 0px inset;
+        position: absolute;
+        background-image: radial-gradient(ellipse, rgba(209,26,63,0.55) 0%,rgb(255, 215, 215) 100%);
+        box-shadow:rgb(253 207 207) 0px 0px 30px 30px ;
+        filter:blur(55px);
+        top:560px;
+        right: -170px;
+      }
+      .template3{
+        position: absolute;
+        top:406px;
+        left: 74px;
+      }
+      .template4{
+        position: absolute;
+        
+        top:2388px;
+        left: 122px;
+      }
+      .template5{
+        position: absolute;
+        top:1308px;
+        right: 0;
+      }
+      .template6{
+        position: absolute;
+        top:3302px;
+      }
     }
     .bodyCart{
       background:#f0ebe3;

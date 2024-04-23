@@ -8,10 +8,10 @@ import { Autoplay,Navigation} from 'swiper/modules';
 import CartBrand from '../CartBrandComponent/CartBrand';
 const Slide = ({datas ,index,typeSlide,bool})=>{
 
-    return<>
+    return(<>
     <Swiper className="mySwiper"
-    spaceBetween={(index-1)*10}
     slidesPerView={index}
+    spaceBetween={60}
     loop={true}
     navigation={true}
     autoplay={{
@@ -22,7 +22,6 @@ const Slide = ({datas ,index,typeSlide,bool})=>{
     >  
     
       {datas && datas.length>0 &&  datas.map((data,index)=>{
-        console.log('swiperLoaded', Swiper)
         if (typeSlide === "slideBanner") {
           return (
             <SwiperSlide key={`data1-${index}`}> 
@@ -40,5 +39,6 @@ const Slide = ({datas ,index,typeSlide,bool})=>{
       })}
     </Swiper>
     </>
+    )
 }
 export default Slide

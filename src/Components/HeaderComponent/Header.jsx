@@ -9,7 +9,7 @@ import LogoApp from '../../assets/images/svg/logo.svg'
 import { CiSearch } from "react-icons/ci";
 import { Image } from 'react-bootstrap';
 const Header = (props)=>{
-  return<>
+  return(<>
     <Navbar expand="lg">
       <Container>
         <Navbar.Brand href="#"><Image src={LogoApp}></Image></Navbar.Brand>
@@ -41,5 +41,6 @@ const Header = (props)=>{
       </Container>
     </Navbar>
   </>
+  )
 }
 export default Header

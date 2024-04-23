@@ -2,7 +2,7 @@
 import Card from 'react-bootstrap/Card';
 
 const CartBrand = ({datas})=>{
-    return<>
+    return(<>
 
     <Card style={{ width: '280px',  alignItems:"center", overflow:'hidden'}} className='flag'>
       <Card.Img variant="top" src={datas.image} style={{aspectRatio:"1"}}/>
@@ -16,5 +16,6 @@ const CartBrand = ({datas})=>{
         </Card.Body>
     </Card>
     </>
+    )
 }
 export default CartBrand
